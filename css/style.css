@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+body a {
+  color: black;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 300px 300px 350px;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "sidebar main main main main main"
+    "sidebar main main main main main"
+    "content1 content1 content2 content2 content3 content3"
+    "footer footer footer footer footer footer";
+}
+
+nav {
+  grid-area: nav;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 10px;
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li {
+  margin: 0 10px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(19, 20, 20, 0.5);
+  padding: 0.5em;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  text-transform: lowercase;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px darkgray;
+  margin-left: 40px;
+}
+
+main {
+  grid-area: main;
+  background: url(../img/beigeCouch.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-txt {
+  text-align: center;
+}
+
+.main-txt h2 {
+  font-size: 150px;
+}
+
+.main-txt p {
+  font-size: 75px;
+  position: absolute;
+  left: 35%;
+  top: 45%;
+}
+
+.main-txt .btn {
+  width: 100px;
+  border: 2px solid black;
+  padding: 1rem;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.main-txt .btn:hover {
+  background-color: rgba(19, 20, 20, 0.5);
+}
+
+.main-txt small {
+  position: absolute;
+  top: 92%;
+  font-size: large;
+  right: 30%;
+}
+
+.sidebar {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  background-color: rgba(214, 208, 203, 0.66);
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.sidebar li a {
+  text-decoration: none;
+}
+
+.sidebar li a:hover {
+  background-color: rgba(19, 20, 20, 0.5);
+  transition-duration: 0.4s;
+  padding: 0.5em;
+}
+
+.content1 {
+  grid-area: content1;
+  margin: 10px;
+}
+
+.content2 {
+  grid-area: content2;
+  margin: 10px;
+}
+
+.content3 {
+  grid-area: content3;
+  margin: 10px;
+}
+
+.content-img {
+  width: 100%;
+  height: 300px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.some-logoes {
+  display: flex;
+  justify-content: center;
+}
+
+.some-logoes i {
+  margin: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5rem 2rem;
+  justify-content: space-between;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+
